@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenai Saya | Muhammad Farhan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS Khusus untuk Susun Atur Halaman About */
+        .intro-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 35px;
+        }
+        .profile-img-container {
+            text-align: center;
+        }
+        .profile-img {
+            width: 100%;
+            max-width: 280px; /* Mengekalkan saiz lebar yang seimbang */
+            height: auto; /* Petak penuh menegak mengikut nisbah asal gambar */
+            border-radius: 8px; /* Bucu melengkung sikit bagi kemas */
+            object-fit: contain; 
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.2);
+            background: var(--card-bg);
+        }
+        .profile-layout { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+            gap: 25px; 
+            margin-top: 30px; 
+        }
+        .info-card { 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid var(--border-color); 
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        .info-card h3 { 
+            color: var(--primary-color); 
+            margin-bottom: 20px; 
+            font-size: 20px; 
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .skills-grid { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 10px; 
+            margin-top: 15px; 
+        }
+        .skill-badge { 
+            background: var(--bg-color); 
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 16px; 
+            border-radius: 20px; 
+            font-size: 13px; 
+            font-weight: 600; 
+            box-shadow: 0 2px 5px var(--shadow);
+        }
+        .timeline {
+            border-left: 2px solid var(--border-color); 
+            padding-left: 20px; 
+            margin-left: 5px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item h4 {
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.4;
+        }
+        .timeline-sub {
+            font-size: 13px; 
+            color: var(--primary-color); 
+            font-weight: 600; 
+            margin: 4px 0;
+        }
+        .timeline-desc {
+            font-size: 14px; 
+            opacity: 0.8; 
+            line-height: 1.6;
+        }
+        .timeline-desc ul {
+            padding-left: 15px;
+            margin-top: 5px;
+        }
+        .timeline-desc li {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MUHAMMAD FARHAN<span>.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="toggle-btn">⚙️ Tukar Tema</button>
+    </header>
+
+    <main class="container" style="max-width: 1000px;">
+        
+        <div class="intro-section">
+            <div class="profile-img-container">
+                <img src="me.jpg" alt="Muhammad Farhan" class="profile-img" onerror="this.src='https://via.placeholder.com/280x350?text=me.jpg+Tiada'">
+            </div>
+            
+            <div>
+                <span class="badge">About Me</span>
+                <h1 style="font-size: 36px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px;">Muhammad Farhan bin Saad</h1>
+                <p style="font-size: 14px; color: var(--primary-color); font-weight: 700; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px;">
+                    Asal: Muar, Johor
+                </p>
+                <p style="font-size: 15px; line-height: 1.7; opacity: 0.8; margin-bottom: 15px;">
+                    Saya merupakan mahasiswa Teknologi Maklumat yang mengkhusus dalam bidang <strong>Informatik Media</strong> di Universiti Sultan Zainal Abidin (UniSZA). Sebagai seorang yang bermotivasi tinggi, saya mempunyai kebolehan untuk belajar dengan pantas dan mudah menyesuaikan diri dengan persekitaran kerja yang baharu.
+                </p>
+                <p style="font-size: 15px; line-height: 1.7; opacity: 0.8;">
+                    Saya seorang yang bertanggungjawab, berdisiplin, serta mampu bekerja secara berdikari mahupun di dalam kumpulan. Fokus utama saya sekarang adalah mencari peluang untuk menimba pengalaman industri serta meningkatkan kemahiran praktikal dan komunikasi saya dalam dunia IT.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-card" style="margin-bottom: 25px;">
+            <h3>🎯 Kemahiran Teknis & Insaniah (Skills)</h3>
+            <div class="skills-grid">
+                <span class="skill-badge">🎮 Unity (Game Dev)</span>
+                <span class="skill-badge">🎬 Blender & Maya (3D Modelling)</span>
+                <span class="skill-badge">📱 Augmented Reality (AR)</span>
+                <span class="skill-badge">🔧 Computer Troubleshooting</span>
+                <span class="skill-badge">✂️ Video Editing (Basic)</span>
+                <span class="skill-badge">📊 Data Entry</span>
+                <span class="skill-badge">💼 Microsoft Office</span>
+                <span class="skill-badge">👥 Teamwork & Fast Learner</span>
+            </div>
+        </div>
+
+        <div class="profile-layout">
+            
+            <!-- Kad Pendidikan yang Telah Dikemas Kini -->
+            <div class="info-card">
+                <h3>🎓 Pendidikan (Education)</h3>
+                <div class="timeline">
+                    
+                    <!-- Peringkat Ijazah (UniSZA) -->
+                    <div class="timeline-item">
+                        <h4>Bachelor of Information Technology (Media Informatics)</h4>
+                        <p class="timeline-sub">Universiti Sultan Zainal Abidin (UniSZA)</p>
+                        <p class="timeline-desc">
+                            2023 - Present<br>
+                            <strong>Status:</strong> Sedang mengikuti pengajian (Semester 6)
+                        </p>
+                    </div>
+
+                    <!-- Peringkat STPM (Berdasarkan Screenshot 2026-05-28 162105.png) -->
+                    <div class="timeline-item" style="margin-top: 20px;">
+                        <h4>Sijil Tinggi Persekolahan Malaysia (STPM)</h4>
+                        <p class="timeline-sub">SMK Tun Perak</p>
+                        <p class="timeline-desc">
+                            2021 - 2023
+                        </p>
+                    </div>
+
+                    <!-- Peringkat SPM (Berdasarkan Screenshot 2026-05-28 162105.png) -->
+                    <div class="timeline-item" style="margin-top: 20px;">
+                        <h4>Sijil Pelajaran Malaysia (SPM)</h4>
+                        <p class="timeline-sub">SMK Tun Perak</p>
+                        <p class="timeline-desc">
+                            2016 - 2020
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>💼 Pengalaman Projek (Experience)</h3>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <h4>Projek Tahun Akhir - AR Tanjak [Sedang Berjalan]</h4>
+                        <p class="timeline-sub">Aplikasi Realiti Terimbas (Augmented Reality)</p>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Membangunkan aplikasi AR mudah alih untuk memvisualisasikan busana kepala tradisional Melayu (Tanjak).</li>
+                                <li>Mencipta model 3D dan mengintegrasikannya ke dalam persekitaran AR.</li>
+                                <li>Melaksanakan interaksi AR berasaskan penanda (*marker-based*) untuk visualisasi masa nyata.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>Projek Pembangunan Permainan Video</h4>
+                        <p class="timeline-sub">Tugasan Kursus Universiti</p>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Membangunkan permainan interaktif mudah sebagai sebahagian daripada tugasan akademik.</li>
+                                <li>Mereka bentuk mekanik permainan, logik pengaturcaraan asas, dan antara muka pengguna (UI).</li>
+                                <li>Menjalankan fasa pengujian (*testing*) dan pembetulan pepijat (*debugging*).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h4>Projek Animasi 3D (Blender)</h4>
+                        <p class="timeline-sub">Tugasan Akademik</p>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Mencipta model watak dan persekitaran 3D menggunakan perisian Blender.</li>
+                                <li>Mengaplikasikan teknik tekstur, pencahayaan, pencapaian rendering, serta membina jujukan animasi pendek (1-2 minit).</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paanopie. All Right Reserved | Tugasan Individu CSD 34203.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

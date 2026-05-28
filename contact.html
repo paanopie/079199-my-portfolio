@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Saya | Muhammad Farhan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS Khusus untuk Susun Atur Halaman Contact */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        /* Bahagian Borang (Kiri) */
+        .contact-form-container {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-color);
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3);
+        }
+
+        /* Bahagian Info Peribadi (Kanan) */
+        .contact-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .social-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            color: var(--text-color);
+            box-shadow: 0 4px 12px var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .social-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 16px rgba(79, 70, 229, 0.1);
+            border-color: var(--primary-color);
+        }
+        .social-icon {
+            font-size: 24px;
+            background: var(--bg-color);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border-color);
+        }
+        .social-details h4 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+        .social-details p {
+            font-size: 13px;
+            opacity: 0.7;
+            white-space: pre-line; /* Memastikan alamat tersusun ke bawah */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MUHAMMAD FARHAN<span>.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="toggle-btn">⚙️ Tukar Tema</button>
+    </header>
+
+    <main class="container" style="max-width: 1000px;">
+        <span class="badge">Hubungi Saya</span>
+        <h1 style="font-size: 36px; font-weight: 800; letter-spacing: -0.5px;">Mari Berhubung</h1>
+        <p style="font-size: 16px; opacity: 0.8; margin-top: 5px;">Mempunyai sebarang pertanyaan atau peluang projek? Tinggalkan mesej anda atau hubungi saya terus.</p>
+
+        <div class="contact-layout">
+            
+            <div class="contact-form-container">
+                <form action="#" method="POST" onsubmit="alert('Mesej anda telah dihantar! (Simulasi)'); return false;">
+                    <div class="form-group">
+                        <label for="name">Nama Penuh</label>
+                        <input type="text" id="name" class="form-control" placeholder="Masukkan nama anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="contoh@emel.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesej Anda</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Tuliskan mesej anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Hantar Mesej 🚀</button>
+                </form>
+            </div>
+
+            <div class="contact-info-container">
+                
+                <a href="https://wa.me/60166117228" target="_blank" class="social-card">
+                    <div class="social-icon">📞</div>
+                    <div class="social-details">
+                        <h4>Contact / WhatsApp</h4>
+                        <p>+60 16 611 7228</p>
+                    </div>
+                </a>
+
+                <a href="mailto:farhanopie6@gmail.com" class="social-card">
+                    <div class="social-icon">📧</div>
+                    <div class="social-details">
+                        <h4>Email</h4>
+                        <p>farhanopie6@gmail.com</p>
+                    </div>
+                </a>
+
+                <div class="social-card" style="cursor: default;">
+                    <div class="social-icon">📍</div>
+                    <div class="social-details">
+                        <h4>Alamat / Lokasi</h4>
+                        <p>Muar, Johor</p>
+                    </div>
+                </div>
+
+                <a href="https://github.com/paanopie/079199-my-portfolio" target="_blank" class="social-card">
+                    <div class="social-icon">💻</div>
+                    <div class="social-details">
+                        <h4>GitHub Portfolio</h4>
+                        <p>github.com/Farhan</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paanopie. All Right Reserved | Tugasan Individu CSD 34203.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Blog | paanopie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS Reka Bentuk Blog */
+        .blog-container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+        
+        .featured-card {
+            display: flex;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .featured-img-area {
+            width: 30%;
+            background: rgba(88, 166, 255, 0.1); 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .featured-content { width: 70%; padding: 35px; display: flex; flex-direction: column; justify-content: center; }
+
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+
+        .blog-card-v2 {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img-area { height: 200px; display: flex; align-items: center; justify-content: center; }
+
+        .meta-row { display: flex; align-items: center; gap: 15px; font-size: 11px; text-transform: uppercase; margin-bottom: 15px; }
+        
+        .category-tag {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 2px 8px;
+            font-weight: 700;
+        }
+
+        .blog-title { font-size: 24px; font-weight: 700; color: var(--text-color); margin: 0 0 15px 0; line-height: 1.3; }
+        .blog-desc { font-size: 14px; line-height: 1.6; color: var(--text-muted); margin: 0 0 25px 0; }
+        
+        .footer-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; margin-top: auto; }
+        
+        @media (max-width: 768px) {
+            .featured-card { flex-direction: column; }
+            .featured-img-area, .featured-content { width: 100%; }
+            .sub-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MUHAMMAD FARHAN<span>.</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="dark-mode-toggle" class="toggle-btn">⚙️ Toggle Theme</button>
+    </header>
+
+    <main class="blog-container" style="margin-top: 40px; margin-bottom: 60px;">
+        
+        <div class="featured-card">
+            <div class="featured-img-area">
+                <span style="font-size: 60px;">🧊</span>
+            </div>
+            <div class="featured-content">
+                <div class="meta-row">
+                    <span class="category-tag">AUGMENTED REALITY</span>
+                    <span class="post-date" style="color: var(--text-muted);">Ongoing Project</span>
+                </div>
+                <h3 class="blog-title">Digital Visualization of Cultural Artifacts via AR TANJAK App</h3>
+                <p class="blog-desc">
+                    Final Year Project (FYP) documentation on developing a mobile Augmented Reality (AR) application to preserve the legacy of the Malay Tanjak.
+                </p>
+                <div class="footer-row">
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-grid">
+            <div class="blog-card-v2">
+                <div class="card-img-area" style="background: rgba(255, 165, 0, 0.1);">
+                    <span style="font-size: 50px;">🎥</span>
+                </div>
+                <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <div class="meta-row">
+                        <span class="category-tag">VIDEOGRAPHY</span>
+                        <span style="color: var(--text-muted);">Production & Editing</span>
+                    </div>
+                    <h3 class="blog-title">Advanced Cinematography and Drone Piloting Techniques</h3>
+                    <p class="blog-desc">Exploring aerial perspectives with drone technology combined with professional camera movement and post-production editing workflows.</p>
+                    <div class="footer-row">
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card-v2">
+                <div class="card-img-area" style="background: rgba(128, 0, 128, 0.1);">
+                    <span style="font-size: 50px;">📷</span>
+                </div>
+                <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <div class="meta-row">
+                        <span class="category-tag">PHOTOGRAPHY</span>
+                        <span style="color: var(--text-muted);">Visual Storytelling</span>
+                    </div>
+                    <h3 class="blog-title">Mastering Lens Composition and Lighting Mastery</h3>
+                    <p class="blog-desc">A deep dive into manual camera settings, framing techniques, and color grading processes to create compelling visual stories.</p>
+                    <div class="footer-row">
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-card-v2">
+                <div class="card-img-area" style="background: rgba(46, 160, 67, 0.1);">
+                    <span style="font-size: 50px;">🎮</span>
+                </div>
+                <div style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <div class="meta-row">
+                        <span class="category-tag">GAME DEV</span>
+                        <span style="color: var(--text-muted);">Academic Coursework</span>
+                    </div>
+                    <h3 class="blog-title">Mechanic Experimentation and Game Logic Development</h3>
+                    <p class="blog-desc">Breakdown of the interactive game development process for academic assignments, focusing on gameplay mechanics and logic testing.</p>
+                    <div class="footer-row">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Paanopie. All Rights Reserved | CSD 34203 Individual Assignment.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+/* --- Reset & Global Variables --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #0f172a;
+    --primary-color: #4f46e5;
+    --accent-color: #06b6d4;
+    --card-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --shadow: rgba(79, 70, 229, 0.08);
+}
+
+[data-theme="dark"] {
+    --bg-color: #090d16;
+    --text-color: #f8fafc;
+    --primary-color: #6366f1;
+    --accent-color: #22d3ee;
+    --card-bg: #111827;
+    --border-color: #1f2937;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.4s ease, color 0.3s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span { color: var(--primary-color); }
+
+.nav-links { display: flex; list-style: none; }
+
+.nav-links li { margin: 0 20px; }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    opacity: 0.7;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+/* --- Hero Layout --- */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Animasi Masuk untuk Teks */
+.hero-text {
+    animation: fadeInUp 0.8s ease forward;
+}
+
+.badge {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    opacity: 0.8;
+}
+
+.hero-buttons { display: flex; gap: 15px; }
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 14px var(--shadow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--card-bg);
+    transform: translateY(-3px);
+}
+
+/* --- Bahagian Gambar (Multimedia Style) --- */
+.hero-graphic {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease forward;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 320px;
+    height: 400px;
+}
+
+/* Bingkai Animasi Cecair kat belakang gambar */
+.image-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    animation: morphing 8s infinite ease-in-out;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    border: 2px solid var(--border-color);
+    box-shadow: 0 20px 40px var(--shadow);
+}
+
+/* Tag Terapung */
+.tech-tag {
+    position: absolute;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 10px 25px var(--shadow);
+    z-index: 3;
+}
+
+.tag-1 { top: 30px; left: -30px; animation: float 4s infinite ease-in-out; }
+.tag-2 { bottom: 40px; right: -30px; animation: float 4s infinite ease-in-out; animation-delay: 2s; }
+
+/* --- Halaman Umum (About & Blog) --- */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px var(--shadow);
+    animation: fadeInUp 0.6s ease;
+}
+
+/* --- Keyframes Animasi --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes morphing {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 50% 50% 30% 70% / 50% 60% 40% 60%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid var(--border-color);
+    font-size: 13px;
+    opacity: 0.7;
+    margin-top: auto;
+}
+
+/* --- Responsif --- */
+@media (max-width: 968px) {
+    .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+    .hero-buttons { justify-content: center; }
+    .hero-graphic { order: -1; }
+    .image-wrapper { width: 280px; height: 350px; }
+    .tech-tag { display: none; } /* Sorok tag dekat phone biar kemas */
+}
