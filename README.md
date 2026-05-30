@@ -2,7 +2,7 @@
 # Personal Blog Portfolio
 
 ## Penerangan Projek
-Ini adalah blog portfolio peribadi yang dibina untuk tugasan CSD 34203. Blog ini memaparkan profil diri, blog post, dan borang hubungi.
+Ini adalah blog portfolio peribadi yang dibina untuk tugasan CSD 34203. Blog ini memaparkan profile diri, blog post, dan tempat untuk hubungi.
 
 ## Teknologi Digunakan
 - HTML5
